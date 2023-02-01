@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height :100%;
+}
+body{
+    overflow-x: hidden;
+}
+:root{
+    --main-color: #fab281;
+    --secondary-color: #1b1b1b;
+}
+/* explanation for couston font i learn */
+@font-face {
+    font-family: "my fav";
+    src: url(./assets/stone\ orgonite.woff);
+}
+.links{
+    position: absolute;
+    background-color: white;
+    opacity: 20%;
+    width: 100%;
+    height: 100vh;
+    left: 0%;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    transform: translate(100%);
+}
+.links a{
+    color: var(--secondary-color);
+}
+
+/* rem fixes to secrren size good than pixles */
+h2{
+    font-size: 2.5rem;
+    line-height: 125%;
+    padding:1rem 0rem;
+}
+h3{
+    font-size: 1.25 rem;
+    line-height: 130%;
+}
+.logo{
+    display: flex;
+    align-items: top center;
+}
+.logo h1{
+    margin-left:0.5 rem;
+    font-size: 1 rem;
+    font-family:"my fav",sans-serif;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav svg{
+    /* to change cursor to a pointer */
+    cursor: pointer;
+    z-index: 10;
+}
+.logo img{
+    width: 1.5 rem;
+}
+/* min height to get minium height of page */
+.frontpage{
+    min-height: 100vh;
+    color:white;
+}
+section{
+    padding: 5%;
+}
+.selpoint{
+    margin-top: 25vh;
+    font-family:"my fav",sans-serif;
+    text-shadow: 0px 4px 12px black;
+    text-align: center;
+}
+.selpoint h3{
+    font-family:"my fav",sans-serif;
+    text-shadow: 0px 4px 12px black;
+}
+.ctas{
+    margin-top: 2rem;
+}
+.ctas button{
+    padding: 0.75rem;
+    font-size: 01rem;
+    border: none;
+    text-shadow: 0px 4px 12px white;
+    margin: 1rem;
+    padding: 1rem;
+}
+/* here var since we use the color that is strored in variable main color in line 10 */
+.cta-main{
+    background-color: var(--main-color);
+    color:var(--secondary-color);
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cta-sec{
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+}
+.hero{
+    position: absolute;
+    left: 0;
+    top: 0;   
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 1px;
+}
+.class{
+    color:var(--secondary-color);
+    text-align: center;
+    font-family: "my fav",sans-serif;
+}
+.videos video{
+    width:100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.meditation,
+.yoga,
+.plates{
+    position: relative;
+}
+.videos h3{
+    position:absolute;
+    color :var(--main-color);
+    text-shadow: 2px 12px black;
+    bottom:10%;
+    left:50%;
+    transform: translate(-50%, -10%);
+    font-size: 2rem;
+}
+.about{
+    color: var(--secondary-color);
+
+}
+.about h2{
+    font-family:"my fav",sans-serif;
+    text-align: center;
+}
+.about p{
+    line-height: 150%;
+    font-size: 1.2rem;
+}
+.about img{
+    margin-top: 10%;
+    width:100%;
+}
+@media screen and (min-width: 768px){
+    body{
+        padding:10%;
+    }
+    .videos{
+        display:flex;
+        gap: 2rem;
+    }
+    .about{
+        display: flex;
+        gap:5rem;
+        justify-content: space-between;
+    }
+    .about img{
+        width:50
+    }
+}
